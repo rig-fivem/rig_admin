@@ -1,0 +1,147 @@
+/*
+----------------------------------------
+RIG Framework (built for CFX Platforms)
+
+Author: Case (https://caseirl.dev)
+Repo: https://github.com/rig-fivem/rig
+License: https://github.com/rig-fivem/rig/blob/main/LICENSE
+----------------------------------------
+*/
+
+/* 
+    Import Fonts
+    Can import from https://fonts.google.com for example
+*/
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wdth@75..100&display=swap');
+
+/* 
+    Theme
+    Basic default theme settings, players can customise in game
+*/
+:root {
+    /* Inventory Sizing */
+    --grid_cell_size: 4.4vh;
+
+    /* Typography */
+    --header_font: "Iceland";
+    --text_font: "Roboto";
+
+    /* Border Radius */
+    --border_radius_outer: 2px;
+    --border_radius_inner: 1px;
+
+    /* Backgrounds */
+    --background_overlay: rgba(0, 0, 0, 0.85);
+    --background_main: rgba(18, 18, 18, 0.85);
+    --background_panel: rgba(22, 22, 22, 0.85);
+    --background_hover: rgba(28, 28, 28, 0.85);
+
+    /* Text */
+    --text_primary: #fff;
+    --text_secondary: #b4b4b4;
+    --text_tertiary: #666;
+
+    /* Accents */
+    --accent: #F97316;
+    --accent2: #c95f13;
+    --accent3: #b53232;
+    --accent4: #666;
+    --accent_fade: rgba(249, 115, 22, 0.02);
+    --accent_glow: rgba(249, 115, 22, 0.12);
+    --accent_glow_inset: rgba(249, 115, 22, 0.05);
+    --accent_glow_strong: rgba(249, 115, 22, 0.6);
+    --ambient_glow_color: rgba(249, 115, 22, 0.06);
+
+    /* Borders */
+    --border_dark: 0.2vh solid rgba(0, 0, 0, 0.5);
+    --border_light: 0.2vh solid rgba(255, 255, 255, 0.1);
+    --border_dashed: 0.1vh dashed #666;
+
+    /* Shadows */
+    --shadow_soft: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --shadow_medium: 0 2px 4px rgba(0, 0, 0, 0.6);
+    --shadow_large: 0 4px 8px rgba(0, 0, 0, 0.75);
+    
+    --inset_shadow_large: inset 2px 0px 2px rgba(0, 0, 0, 0.5), inset 0px 2px 2px rgba(0, 0, 0, 0.5), inset -2px 0px 2px rgba(0, 0, 0, 0.5), inset 0px -2px 2px rgba(0, 0, 0, 0.5);
+    --inset_shadow_small: inset 1px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 1px 1px rgba(0, 0, 0, 0.5), inset -1px 0px 1px rgba(0, 0, 0, 0.5), inset 0px -1px 1px rgba(0, 0, 0, 0.5);
+    
+    --text_shadow_hard: -1px -1px 0px rgba(0, 0, 0, 1), 1px -1px 0px rgba(0, 0, 0, 1), -1px 1px 0px rgba(0, 0, 0, 1), 1px 1px 0px rgba(0, 0, 0, 1);
+
+    /* Gradients */
+    --gradient_fade_left: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.75) 8%,
+        rgba(0, 0, 0, 0.5) 18%,
+        rgba(0, 0, 0, 0.25) 28%,
+        rgba(0, 0, 0, 0.1) 36%,
+        rgba(0, 0, 0, 0) 45%
+    );
+    --gradient_fade_right: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.75) 8%,
+        rgba(0, 0, 0, 0.5) 18%,
+        rgba(0, 0, 0, 0.25) 28%,
+        rgba(0, 0, 0, 0.1) 36%,
+        rgba(0, 0, 0, 0) 45%
+    );
+    --gradient_fade_both: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(0, 0, 0, 0.6) 6%,
+        rgba(0, 0, 0, 0.3) 15%,
+        rgba(0, 0, 0, 0.1) 22%,
+        rgba(0, 0, 0, 0) 28%,
+        rgba(0, 0, 0, 0) 72%,
+        rgba(0, 0, 0, 0.1) 78%,
+        rgba(0, 0, 0, 0.3) 85%,
+        rgba(0, 0, 0, 0.6) 94%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+       
+    /* Buttons */
+    --button_padding: 0.5vh 1vh;
+
+    /* Scrollbars */
+    --scrollbar_track: rgba(255, 255, 255, 0.25);
+    --scrollbar_thumb: rgba(255, 255, 255, 0.8);
+
+    /* Icons */
+    --icon_primary: #fff;
+    --icon_secondary: #666;
+    
+    /* Tooltip */
+    --tooltip_title: black;
+    --tooltip_rarity_badge: black;
+
+    /* Rarity Colours */
+    --rarity_common: rgba(255, 255, 255, 0.8);
+    --rarity_uncommon: rgba(38, 189, 38, 0.8);
+    --rarity_rare: rgba(66, 135, 245,  0.8);
+    --rarity_epic: rgba(119, 45, 189,  0.8);
+    --rarity_legendary: rgba(219, 144, 57,  0.8);
+
+    /* Notify Colors */
+    --notify_success: #2ecc71;
+    --notify_error: #e74c3c;
+    --notify_info: #3498db;
+    --notify_warning: #f39c12;
+    --notify_primary: #9b59b6;
+
+    /* Status HUD Colours */
+    --status_health: #b53232;
+    --status_armour: #0980f0;
+    --status_hunger: #e0a355;
+    --status_thirst: #55b8e0;
+    --status_stamina: #55e090;
+    --status_oxygen: #8055e0;
+    --status_temperature: #e07855;
+    --status_stress: #c455e0;
+    --status_stress: #e05555;
+    --status_bleeding: #cc2222;
+    --status_radiation: #aacc22;
+    --status_infection: #55cc77;
+    --status_poison: #88cc22;
+}

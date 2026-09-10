@@ -1,0 +1,202 @@
+.qm {
+    position: fixed;
+    height: fit-content;
+    max-height: calc(90vh - 16vh);
+    background: var(--background_panel);
+    border: 0.2vh solid rgba(255, 255, 255, 0.06);
+    border-top: 0.2vh solid var(--accent);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: none;
+    width: 15vw;
+    pointer-events: auto;
+}
+
+.qm_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.qm_header {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+    padding: 1vh 1.5vh;
+    cursor: pointer;
+    border-bottom: 0.2vh solid rgba(255, 255, 255, 0.06);
+    transition: background 0.15s;
+}
+
+.qm_header:hover {
+    background: var(--background_hover);
+}
+
+.qm_back_icon {
+    font-size: 0.7rem;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.qm_header_title {
+    font-family: var(--header_font);
+    font-size: 1rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.qm_title {
+    font-family: var(--header_font);
+    font-size: 1rem;
+    padding: 1vh 1.5vh;
+    color: var(--accent);
+    border-bottom: 0.2vh solid rgba(255, 255, 255, 0.06);
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+}
+
+.qm_list {
+    padding: 0.5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.qm_item {
+    display: flex;
+    align-items: center;
+    gap: 1.2vh;
+    cursor: pointer;
+    transition: background 0.15s;
+    padding: 0.8vh 1.5vh;
+    background: transparent;
+    border-bottom: 0.1vh solid rgba(255, 255, 255, 0.04);
+    position: relative;
+}
+
+.qm_item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--accent);
+    transition: width 0.15s;
+}
+
+.qm_item:hover::before,
+.qm_item.kb_focus::before {
+    width: 0.2vh;
+}
+
+.qm_item:hover,
+.qm_item.kb_focus {
+    background: var(--background_hover);
+}
+
+.qm_icon {
+    width: 1.8vh;
+    height: 1.8vh;
+    min-width: 1.8vh;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    line-height: 1;
+    text-align: center;
+    object-fit: contain;
+    color: var(--text_secondary);
+    transition: color 0.15s;
+}
+
+img.qm_icon {
+    border-radius: 0.2vh;
+}
+
+.qm_item:hover .qm_icon,
+.qm_item.kb_focus .qm_icon {
+    color: var(--accent);
+}
+
+.qm_text {
+    font-family: var(--text_font);
+    font-size: 0.75rem;
+    color: var(--text_secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    transition: color 0.15s;
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.qm_item:hover .qm_text,
+.qm_item.kb_focus .qm_text {
+    color: var(--text_primary);
+}
+
+.qm_chevron {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 0.6rem;
+    color: var(--text_tertiary);
+}
+
+.qm_item.qm_pending {
+    opacity: 0.45;
+    pointer-events: none;
+    cursor: default;
+}
+
+.qm_loading,
+.qm_empty {
+    padding: 1.5vh;
+    font-family: var(--text_font);
+    font-size: 0.7rem;
+    color: var(--text_tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    text-align: center;
+}
+
+.qm_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75vh;
+    padding: 1vh;
+    border-top: 0.2vh solid rgba(255, 255, 255, 0.06);
+    background: var(--background_main);
+}
+
+.qm_footer,
+.qm_footer * {
+    font-family: var(--text_font);
+    font-size: 0.65rem;
+    color: var(--text_tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.qm_key {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.8vh;
+    height: 1.8vh;
+    padding: 0 0.4vh;
+    border: 0.1vh solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.3vh;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text_secondary);
+    font-weight: 600;
+}
